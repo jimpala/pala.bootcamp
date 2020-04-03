@@ -8,8 +8,18 @@ const HalfDivider = styled.div`
   align-items: center;
 `;
 
-const Counter = ({colour}) => {
-  return <HalfDivider style={{ backgroundColor: colour }}></HalfDivider>;
+const Number = styled.h2`
+  color: white;
+  font-size: 12rem;
+  font-weight: bold;
+`;
+
+const Counter = ({ background, number }) => {
+  return (
+    <HalfDivider style={{ backgroundColor: background }}>
+      <Number>{number}</Number>
+    </HalfDivider>
+  );
 };
 
 export default Counter;
